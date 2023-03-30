@@ -4,8 +4,8 @@
 
   --clr-primary-400: hsl(228, 39%, 23%);
 
-  --clr-netral-100: hsl(232, 12%, 13%);
-  --clr-netral-900: hsl(0 0% 0%);
+  --clr-neutral-100: hsl(232, 12%, 13%);
+  --clr-neutral-900: hsl(0 0% 0%);
 
   --ff-primary: 'Be Vietnam Pro', sans-serif;
 
@@ -117,10 +117,10 @@ svg {
 .text-accent-100 {
   color: var(--clr-accent-100);
 }
-.text-netural-100 {
+.text-neutral-100 {
   color: var(--clr-neutral-100);
 }
-.text-netural-900 {
+.text-neutral-900 {
   color: var(--clr-neutral-900);
 }
 
@@ -133,10 +133,10 @@ svg {
 .bg-accent-100 {
   background-color: var(--clr-accent-100);
 }
-.bg-netural-100 {
+.bg-neutral-100 {
   background-color: var(--clr-neutral-100);
 }
-.bg-netural-900 {
+.bg-neutral-900 {
   background-color: var(--clr-neutral-900);
 }
 
