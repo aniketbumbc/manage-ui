@@ -36,9 +36,9 @@ const Home = () => {
       </header>
       {/* /** Main Section Started Here  */}
       <main>
-        <section>
+        <section className='padding-block-900'>
           <div className='container'>
-            <div className='even-coloumns'>
+            <div className='even-columns'>
               <div>
                 <h1 className='fs-primary-heading fw-bold'>
                   Bring everyone together to build better products.
@@ -59,7 +59,7 @@ const Home = () => {
 
         {/* Next Section 2  */}
 
-        <section>
+        <section className='padding-block-900'>
           <div className='container'>
             <div className='even-columns'>
               <div>
@@ -113,13 +113,13 @@ const Home = () => {
           </div>
         </section>
 
-        <section className='carousel'>
-          <h2 className='fs-secondary-heading'>What they've said</h2>
+        <section className='carousel | padding-block-700'>
+          <h2 className='fs-secondary-heading fw-bold'>What they've said</h2>
           {/* <!-- Carousel here --> */}
           <button className='button'>Get Started</button>
         </section>
 
-        <section className='bg-primary-400 text-netural-100'>
+        <section className='bg-accent-400 text-neutral-100 | padding-block-700'>
           <div className='container'>
             <div className='even-columns'>
               <div>
@@ -137,9 +137,9 @@ const Home = () => {
         </section>
       </main>
 
-      <footer className='bg-neutral-900 text-neutral-100'>
+      <footer className='bg-neutral-900 text-neutral-100 padding-block-700'>
         <div className='container'>
-          <div className='even-coloumns'>
+          <div className='even-columns'>
             <div>
               <a href='/#'>
                 {' '}
