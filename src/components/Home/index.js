@@ -1,37 +1,80 @@
 import './index.css';
 import logoImage from '../../assets/images/logo.svg';
 import illustrationIntro from '../../assets/images/illustration-intro.svg';
+import hamburger from '../../assets/images/icon-hamburger.svg';
+import closeIcon from '../../assets/images/icon-close.svg';
 
 const Home = () => {
+  const handleList = () => {
+    const primaryNav = document.querySelector('.primary-navigation');
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+
+    if (primaryNav.hasAttribute('data-visible')) {
+      navToggle.setAttribute('aria-expanded', false);
+    } else {
+      navToggle.setAttribute('aria-expanded', true);
+    }
+
+    primaryNav.toggleAttribute('data-visible');
+  };
+
   return (
     <>
       <header className='primary-header'>
         <div className='container'>
-          <a href='/#'>
-            {' '}
-            <img src={logoImage} alt='Manage' />{' '}
-          </a>
-          <nav className='primary-navigation'>
-            <ul className='nav-list'>
-              <li>
-                <a href='/#'>Pricing</a>
-              </li>
-              <li>
-                <a href='/#'>Product</a>
-              </li>
-              <li>
-                <a href='/#'>About us</a>
-              </li>
-              <li>
-                <a href='/#'> Carrers </a>
-              </li>
-              <li>
-                <a href='/#'>Community</a>
-              </li>
-            </ul>
-          </nav>
+          <div className='nav-wrapper'>
+            <a href='/#'>
+              {' '}
+              <img src={logoImage} alt='Manage' />{' '}
+            </a>
 
-          <button className='button'> Get Started </button>
+            <button
+              className='mobile-nav-toggle'
+              aria-controls='primary-navigation'
+              onClick={handleList}
+              aria-expanded='false'
+            >
+              {' '}
+              <img
+                src={hamburger}
+                alt='hamburger'
+                className='icon-hamburger'
+                aria-hidden='true'
+              />
+              <img
+                src={closeIcon}
+                alt='closeIcon'
+                className='icon-close'
+                aria-hidden='true'
+              />
+              <span className='visually-hidden'>Menu</span>
+            </button>
+
+            <nav className='primary-navigation'>
+              <ul className='nav-list' id='primary-navigation'>
+                <li>
+                  <a href='/#'>Pricing</a>
+                </li>
+                <li>
+                  <a href='/#'>Product</a>
+                </li>
+                <li>
+                  <a href='/#'>About us</a>
+                </li>
+                <li>
+                  <a href='/#'> Carrers </a>
+                </li>
+                <li>
+                  <a href='/#'>Community</a>
+                </li>
+              </ul>
+            </nav>
+
+            <button className='button' style={{ display: 'none' }}>
+              {' '}
+              Get Started{' '}
+            </button>
+          </div>
         </div>
       </header>
       {/* /** Main Section Started Here  */}
